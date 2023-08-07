@@ -8,7 +8,7 @@ export default function Contacts() {
             headerTitle={title}
             topNavigationTab={<TopNavigationTab />}
         >
-            <Typography>{title}</Typography>
+            <></>
         </DashboardLayout>
     );
 }
