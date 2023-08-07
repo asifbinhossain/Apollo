@@ -51,7 +51,7 @@ export default function SideNavigation(props: DrawerProps) {
                     <ListItemIcon>
                         <StoreIcon />
                     </ListItemIcon>
-                    <ListItemText>Product Name</ListItemText>
+                    <ListItemText>Shatez</ListItemText>
                 </ListItem>
                 <ListItem sx={{ ...item, ...itemCategory }}>
                     <ListItemIcon>
