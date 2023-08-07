@@ -15,6 +15,9 @@ import { SIDE_NAV_CATEGORIES } from "../components/SideNavigationCategories";
 import SideNavItem from "./SideNavItem";
 import { usePathname } from "next/navigation";
 import path from "path";
+import theme from "@/theme";
+import Link from "next/link";
+import NextLink from "next/link";
 
 const item = {
     py: "2px",
@@ -44,8 +47,8 @@ export default function SideNavigation(props: DrawerProps) {
                     sx={{
                         ...item,
                         ...itemCategory,
-                        fontSize: 22,
-                        color: "#fff",
+                        fontSize: 30,
+                        color: theme.palette.primary.main,
                     }}
                 >
                     <ListItemIcon>
@@ -57,7 +60,13 @@ export default function SideNavigation(props: DrawerProps) {
                     <ListItemIcon>
                         <HomeIcon />
                     </ListItemIcon>
-                    <ListItemText>Project Overview</ListItemText>
+                    <ListItemButton
+                        href="/"
+                        LinkComponent={NextLink}
+                        sx={{ px: 0, py: 0 }}
+                    >
+                        Home
+                    </ListItemButton>
                 </ListItem>
                 {sideNavCategories.map(({ id, children }) => (
                     <Box key={id} sx={{ bgcolor: "#101F33" }}>
@@ -66,14 +75,6 @@ export default function SideNavigation(props: DrawerProps) {
                                 {id}
                             </ListItemText>
                         </ListItem>
-                        {/* {children.map(({ id: childId, icon, active }) => (
-                            <ListItem disablePadding key={childId}>
-                                <ListItemButton selected={active} sx={item}>
-                                    <ListItemIcon>{icon}</ListItemIcon>
-                                    <ListItemText>{childId}</ListItemText>
-                                </ListItemButton>
-                            </ListItem>
-                        ))} */}
                         {children.map((item) => {
                             const active = item.path
                                 ? pathname === item.path

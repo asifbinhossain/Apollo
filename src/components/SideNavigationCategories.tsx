@@ -7,6 +7,9 @@ import SettingsInputComponentIcon from "@mui/icons-material/SettingsInputCompone
 import TimerIcon from "@mui/icons-material/Timer";
 import SettingsIcon from "@mui/icons-material/Settings";
 import PhonelinkSetupIcon from "@mui/icons-material/PhonelinkSetup";
+import MessageIcon from "@mui/icons-material/Message";
+import EmailIcon from "@mui/icons-material/Email";
+import AssessmentIcon from "@mui/icons-material/Assessment";
 
 interface SideNavItem {
     id: string;
@@ -24,39 +27,28 @@ interface SideNavCategory {
 
 export const SIDE_NAV_CATEGORIES: SideNavCategory[] = [
     {
-        id: "Build",
+        id: "Marketing",
         children: [
             {
-                id: "Authentication",
+                id: "Contacts",
                 icon: <PeopleIcon />,
-                path: "/authentication",
+                path: "/contacts",
                 active: true,
             },
-            { id: "Database", icon: <DnsRoundedIcon />, path: "/database" },
+            { id: "Message", icon: <MessageIcon />, path: "/message" },
             {
-                id: "Storage",
-                icon: <PermMediaOutlinedIcon />,
-                path: "/storage",
+                id: "Email",
+                icon: <EmailIcon />,
+                path: "/email",
             },
-            { id: "Hosting", icon: <PublicIcon />, path: "/hosting" },
-            {
-                id: "Functions",
-                icon: <SettingsEthernetIcon />,
-                path: "/functions",
-            },
-            {
-                id: "Machine learning",
-                icon: <SettingsInputComponentIcon />,
-                path: "/machinelearning",
-            },
+            { id: "Metrics", icon: <AssessmentIcon />, path: "/metrics" },
         ],
     },
     {
-        id: "Quality",
+        id: "Marketplace",
         children: [
             { id: "Analytics", icon: <SettingsIcon />, path: "/analytics" },
             { id: "Performance", icon: <TimerIcon />, path: "/performance" },
-            { id: "Test Lab", icon: <PhonelinkSetupIcon />, path: "/testlab" },
         ],
     },
 ];

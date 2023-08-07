@@ -66,15 +66,15 @@ export default function SideNavItem(props: SideNavItemProps) {
                     ...item,
                     color: "rgba(255, 255, 255, 0.7)",
                     ...(active && {
-                        backgroundColor: "red",
+                        backgroundColor: "cyan",
                     }),
                     "&:hover": {
-                        backgroundColor: "orange",
+                        backgroundColor: "teal",
                         color: theme.palette.primary.main,
                     },
-                    "&:focus": {
-                        backgroundColor: "blue",
-                    },
+                    // "&:focus": {
+                    //     backgroundColor: "green",
+                    // },
                 }}
                 {...linkProps}
             >

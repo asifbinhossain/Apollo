@@ -1,8 +1,8 @@
 import { Typography } from "@mui/material";
 import { DashboardLayout } from "../components";
 
-export default function Functions() {
-    const title = "Functions";
+export default function Email() {
+    const title = "Email";
 
     return (
         <DashboardLayout headerTitle={title}>

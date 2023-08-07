@@ -1,11 +1,11 @@
 import { Typography } from "@mui/material";
 import { DashboardLayout } from "../components";
 
-export default function Storage() {
-    const title = "Storage";
+export default function Metrics() {
+    const title = "Metrics";
 
     return (
-        <DashboardLayout headerTitle="Storage">
+        <DashboardLayout headerTitle={title}>
             <Typography>{title}</Typography>
         </DashboardLayout>
     );
